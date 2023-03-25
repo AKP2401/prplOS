@@ -1,0 +1,10 @@
+qemu-system-aarch64 \
+-M virt \
+-m 2G \
+-no-reboot \
+-nographic \
+-cpu cortex-a53 \
+-kernel ./zImage \
+-netdev user,id=net0 -device virtio-net-pci,netdev=net0 \
+-drive file=./root.ext4,if=virtio,format=raw -append "root=/dev/vda" \
+-virtfs local,path=./foo,mount_tag=foo,security_model=mapped-xattr
