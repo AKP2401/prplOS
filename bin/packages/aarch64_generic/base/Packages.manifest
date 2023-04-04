@@ -1,0 +1,711 @@
+Package: busybox
+Version: 1.30.1-6
+Depends: libc
+Source: package/utils/busybox
+SourceName: busybox
+License: GPL-2.0
+LicenseFiles: LICENSE archival/libarchive/bz/LICENSE
+Section: base
+Essential: yes
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_generic
+Installed-Size: 238021
+Filename: busybox_1.30.1-6_aarch64_generic.ipk
+Size: 238434
+SHA256sum: 0a4cd0b1c00442c3db019c05067ab7fe1789790edb03d7bf78c534ba96709d6e
+Description:  The Swiss Army Knife of embedded Linux.
+ It slices, it dices, it makes Julian Fries.
+
+Package: dnsmasq
+Version: 2.85-1
+Depends: libc, libubus20210603
+Source: package/network/services/dnsmasq
+SourceName: dnsmasq
+License: GPL-2.0
+LicenseFiles: COPYING
+Section: net
+Require-User: dnsmasq=453:dnsmasq=453
+Architecture: aarch64_generic
+Installed-Size: 122586
+Filename: dnsmasq_2.85-1_aarch64_generic.ipk
+Size: 123360
+SHA256sum: cdfb4103f769b1911d49e847bfa4a29b19209096e85984475e1557d837c9cdd5
+Description:  It is intended to provide coupled DNS and DHCP service to a LAN.
+
+Package: dropbear
+Version: 2019.78-2
+Depends: libc
+Alternatives: 100:/usr/bin/ssh:/usr/sbin/dropbear, 100:/usr/bin/scp:/usr/sbin/dropbear
+Source: package/network/services/dropbear
+SourceName: dropbear
+License: MIT
+LicenseFiles: LICENSE libtomcrypt/LICENSE libtommath/LICENSE
+Section: net
+Architecture: aarch64_generic
+Installed-Size: 84698
+Filename: dropbear_2019.78-2_aarch64_generic.ipk
+Size: 85436
+SHA256sum: 2bc4a46280ba913688c407adabd3f015ca430fa91178ceb4fcac9ce4f11719da
+Description:  A small SSH2 server/client designed for small memory environments.
+
+Package: firewall
+Version: 2020-06-04-050816af-3
+Depends: libc, libubox20191228, libubus20210603, libuci20130104, libip4tc2, libip6tc2, libxtables12, kmod-ipt-core, kmod-ipt-conntrack, kmod-nf-conntrack6, kmod-ipt-nat
+Source: package/network/config/firewall
+SourceName: firewall
+License: ISC
+Section: net
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: aarch64_generic
+Installed-Size: 48761
+Filename: firewall_2020-06-04-050816af-3_aarch64_generic.ipk
+Size: 49499
+SHA256sum: 244386947f2a272d38f453c17bdc4cf5c78bddac9a37da35786db6037db84c8b
+Description:  This package provides a config-compatible C implementation of the UCI firewall.
+
+Package: getrandom
+Version: 2019-06-16-4df34a4d-4
+Depends: libc
+Source: package/system/ubox
+SourceName: getrandom
+License: GPL-2.0
+Section: base
+Maintainer: John Crispin <john@phrozen.org>
+Architecture: aarch64_generic
+Installed-Size: 1508
+Filename: getrandom_2019-06-16-4df34a4d-4_aarch64_generic.ipk
+Size: 2268
+SHA256sum: a19683db897688f35b7943c388c026f10b0ad55ff843198e453d8207b8411760
+Description:  OpenWrt getrandom system helper
+
+Package: jshn
+Version: 2020-05-25-66195aee-1
+Depends: libc, libjson-c2, libubox20191228, libblobmsg-json
+Source: package/libs/libubox
+SourceName: jshn
+License: ISC
+Section: utils
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_generic
+Installed-Size: 6319
+Filename: jshn_2020-05-25-66195aee-1_aarch64_generic.ipk
+Size: 7118
+SHA256sum: 7f472b507671c62f96a44720ac7c5e855dbdccbe55d99f43b2239caf8867b316
+Description:  Library for parsing and generating JSON from shell scripts
+
+Package: jsonfilter
+Version: 2018-02-04-c7e938d6-1
+Depends: libc, libubox20191228, libjson-c2
+Source: package/utils/jsonfilter
+SourceName: jsonfilter
+License: ISC
+Section: base
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: aarch64_generic
+Installed-Size: 9503
+Filename: jsonfilter_2018-02-04-c7e938d6-1_aarch64_generic.ipk
+Size: 10251
+SHA256sum: 4991ab976e087940ab6491befbc83fb5af170377bc5c7187ce4f4c16e0e0d3d1
+Description:  OpenWrt JSON filter utility
+
+Package: libblobmsg-json
+Version: 2020-05-25-66195aee-1
+Depends: libc, libjson-c2, libubox20191228
+Source: package/libs/libubox
+SourceName: libblobmsg-json
+License: ISC
+Section: libs
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_generic
+Installed-Size: 3502
+Filename: libblobmsg-json_2020-05-25-66195aee-1_aarch64_generic.ipk
+Size: 4230
+SHA256sum: 2187fa8f71f53db76457ab12c2c8a3dce24de14259a988225d3c59292ccdcc0b
+Description:  blobmsg <-> json conversion library
+
+Package: libjson-c2
+Version: 0.12.1-3.1
+Depends: libc
+Provides: libjson-c
+Source: package/libs/libjson-c
+SourceName: libjson-c
+License: MIT
+LicenseFiles: COPYING
+Section: libs
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_generic
+Installed-Size: 15443
+Filename: libjson-c2_0.12.1-3.1_aarch64_generic.ipk
+Size: 16191
+SHA256sum: 3554fff1173581ceac5ec1d6cc7aea564e29439739f22dc793705956ee846206
+Description:  This package contains a library for javascript object notation backends.
+
+Package: libjson-script
+Version: 2020-05-25-66195aee-1
+Depends: libc, libubox20191228
+Source: package/libs/libubox
+SourceName: libjson-script
+License: ISC
+Section: utils
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_generic
+Installed-Size: 4555
+Filename: libjson-script_2020-05-25-66195aee-1_aarch64_generic.ipk
+Size: 5303
+SHA256sum: 5c952ecbaf53396d7ab897cccfc18c36d484504d6e84933645c8538af54ac374
+Description:  Minimalistic JSON based scripting engine
+
+Package: liblua5.1.5
+Version: 5.1.5-3
+Depends: libc
+Provides: liblua
+Source: package/utils/lua
+SourceName: liblua
+License: MIT
+LicenseFiles: COPYRIGHT
+Section: libs
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: aarch64_generic
+Installed-Size: 66693
+Filename: liblua5.1.5_5.1.5-3_aarch64_generic.ipk
+Size: 67579
+SHA256sum: 50b6f863422e9eca3db32a1c1d71161a8669a9a19ad03b570a68e440914b1cbc
+Description:  Lua is a powerful light-weight programming language designed for extending 
+ applications. Lua is also frequently used as a general-purpose, stand-alone 
+ language. Lua is free software.
+ This package contains the Lua shared libraries, needed by other programs.
+
+Package: libnl-tiny
+Version: 0.1-5
+Depends: libc
+Source: package/libs/libnl-tiny
+SourceName: libnl-tiny
+License: LGPL-2.1
+Section: libs
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_generic
+Installed-Size: 14156
+Filename: libnl-tiny_0.1-5_aarch64_generic.ipk
+Size: 14837
+SHA256sum: a59aa6dfd0bd865fa86344606a66b610184ea38aa27277fdad9f0f3b6caf1c55
+Description:  This package contains a stripped down version of libnl
+
+Package: libopenssl-conf
+Version: 1.1.1n-1
+Depends: libc, libopenssl1.1
+Source: package/libs/openssl
+SourceName: libopenssl-conf
+License: OpenSSL
+LicenseFiles: LICENSE
+Section: libs
+Maintainer: Eneas U de Queiroz <cotequeiroz@gmail.com>
+Architecture: aarch64_generic
+Installed-Size: 4783
+Filename: libopenssl-conf_1.1.1n-1_aarch64_generic.ipk
+Size: 5749
+SHA256sum: 5af1cdeec11659cd4565cc4a3e578aa5bb9251b3a6387d6faa03a22f5f304be3
+Description:  The OpenSSL Project is a collaborative effort to develop a robust,
+ commercial-grade, full-featured, and Open Source toolkit implementing the
+ Transport Layer Security (TLS) protocol as well as a full-strength
+ general-purpose cryptography library.
+ This package installs the OpenSSL configuration file /etc/ssl/openssl.cnf.
+
+Package: libopenssl1.1
+Version: 1.1.1n-1
+Depends: libc
+Provides: libopenssl
+Source: package/libs/openssl
+SourceName: libopenssl
+License: OpenSSL
+LicenseFiles: LICENSE
+Section: libs
+Maintainer: Eneas U de Queiroz <cotequeiroz@gmail.com>
+Architecture: aarch64_generic
+Installed-Size: 1177635
+Filename: libopenssl1.1_1.1.1n-1_aarch64_generic.ipk
+Size: 1171418
+SHA256sum: cf1991ba25dd3faf36900b5b3b424794c4d0aaaf4b140e507412592a00c29130
+Description:  The OpenSSL Project is a collaborative effort to develop a robust,
+ commercial-grade, full-featured, and Open Source toolkit implementing the
+ Transport Layer Security (TLS) protocol as well as a full-strength
+ general-purpose cryptography library.
+ This package contains the OpenSSL shared libraries, needed by other programs.
+
+Package: libubox20191228
+Version: 2020-05-25-66195aee-1
+Depends: libc
+Provides: libubox
+Source: package/libs/libubox
+SourceName: libubox
+License: ISC
+Section: libs
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_generic
+Installed-Size: 20756
+Filename: libubox20191228_2020-05-25-66195aee-1_aarch64_generic.ipk
+Size: 21482
+SHA256sum: 6c20df93110faed1796ee2e4916f86ac6d31738f72fedd85e8c04ab8198c5233
+Description:  Basic utility library
+
+Package: libubus-lua
+Version: 2021-07-01-38c7fdd8-3
+Depends: libc, libubus20210603, liblua5.1.5
+Source: package/system/ubus
+SourceName: libubus-lua
+License: LGPL-2.1
+Section: libs
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_generic
+Installed-Size: 6465
+Filename: libubus-lua_2021-07-01-38c7fdd8-3_aarch64_generic.ipk
+Size: 7271
+SHA256sum: 31135191f0dec15229000e3a7e97fda0e37c31ab578e3fb781b8711140ad1d7e
+Description:  Lua binding for the OpenWrt RPC client
+
+Package: libubus20210603
+Version: 2021-07-01-38c7fdd8-3
+Depends: libc, libubox20191228
+Provides: libubus
+Source: package/system/ubus
+SourceName: libubus
+License: LGPL-2.1
+Section: libs
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_generic
+Installed-Size: 9631
+Filename: libubus20210603_2021-07-01-38c7fdd8-3_aarch64_generic.ipk
+Size: 10393
+SHA256sum: 790c999b20aa11a0fd91349489bbef30136ebcc6e46be5c9680f953fc0e12ad0
+Description:  OpenWrt RPC client library
+
+Package: libuci20130104
+Version: 2019-09-01-415f9e48-4
+Depends: libc, libubox20191228
+Provides: libuci
+Source: package/system/uci
+SourceName: libuci
+License: LGPL-2.1
+Section: libs
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_generic
+Installed-Size: 15845
+Filename: libuci20130104_2019-09-01-415f9e48-4_aarch64_generic.ipk
+Size: 16615
+SHA256sum: 00123da2cad004133bb2f29b31832f05f11951713abd5b69daa9bb41ffafe6f9
+Description:  C library for the Unified Configuration Interface (UCI)
+
+Package: libuclient20160123
+Version: 2020-06-17-51e16ebf-1
+Depends: libc, libubox20191228
+Provides: libuclient
+Source: package/libs/uclient
+SourceName: libuclient
+License: ISC
+Section: libs
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_generic
+Installed-Size: 9630
+Filename: libuclient20160123_2020-06-17-51e16ebf-1_aarch64_generic.ipk
+Size: 10387
+SHA256sum: 239b7ce0bd463888da68fb7c524a23a86474b27766acc5a82845e76d913a696b
+Description:  HTTP/1.1 client library
+
+Package: libustream-openssl20150806
+Version: 2020-03-13-40b563b1-1
+Depends: libc, libubox20191228, libopenssl1.1
+Provides: libustream-openssl
+Source: package/libs/ustream-ssl
+SourceName: libustream-openssl
+License: ISC
+Section: libs
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_generic
+Installed-Size: 3949
+Filename: libustream-openssl20150806_2020-03-13-40b563b1-1_aarch64_generic.ipk
+Size: 4701
+SHA256sum: 9d4a5eb04ee5b2a1e190ad6fd3344a7e3c44dc7259e0dc009369c26e277e6fdc
+Description:  ustream SSL Library (openssl)
+
+Package: logd
+Version: 2019-06-16-4df34a4d-4
+Depends: libc, libubox20191228, libubus20210603, libblobmsg-json
+Source: package/system/ubox
+SourceName: logd
+License: GPL-2.0
+Section: base
+Maintainer: John Crispin <john@phrozen.org>
+Architecture: aarch64_generic
+Installed-Size: 9649
+Filename: logd_2019-06-16-4df34a4d-4_aarch64_generic.ipk
+Size: 10358
+SHA256sum: 92453d9af274c748caa803f0e452fc2bb82c803ffdc9d1de645e48ace3c168d4
+Description:  OpenWrt system log implementation
+
+Package: lua
+Version: 5.1.5-3
+Depends: libc, liblua5.1.5
+Source: package/utils/lua
+SourceName: lua
+License: MIT
+LicenseFiles: COPYRIGHT
+Section: lang
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: aarch64_generic
+Installed-Size: 4473
+Filename: lua_5.1.5-3_aarch64_generic.ipk
+Size: 5317
+SHA256sum: 92592d77d027bed10c2c931ed712835d6caee6fd1d19153a8e666938568a99c3
+Description:  Lua is a powerful light-weight programming language designed for extending 
+ applications. Lua is also frequently used as a general-purpose, stand-alone 
+ language. Lua is free software.
+ This package contains the Lua language interpreter.
+
+Package: netifd
+Version: 2020-06-04-e45b140-3
+Depends: libc, libuci20130104, libnl-tiny, libubus20210603, ubus, ubusd, jshn, libubox20191228
+Source: package/network/config/netifd
+SourceName: netifd
+License: GPL-2.0
+Section: base
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_generic
+Installed-Size: 71883
+Filename: netifd_2020-06-04-e45b140-3_aarch64_generic.ipk
+Size: 72655
+SHA256sum: ea9bc9418508a5ccbda5a4e6db2dd456ab9b9651e7f18948b97093d9fa323287
+Description:  OpenWrt Network Interface Configuration Daemon
+
+Package: odhcp6c
+Version: 2021-01-09-64e1b4e7-16
+Depends: libc, libubox20191228
+Source: package/network/ipv6/odhcp6c
+SourceName: odhcp6c
+License: GPL-2.0
+Section: net
+Maintainer: Hans Dedecker <dedeckeh@gmail.com>
+Architecture: aarch64_generic
+Installed-Size: 24964
+Filename: odhcp6c_2021-01-09-64e1b4e7-16_aarch64_generic.ipk
+Size: 25695
+SHA256sum: ec8b67c5d96fa4300f8761d9abcd1fa782c2377966294387091f36a969c771da
+Description:  Embedded DHCPv6-client for OpenWrt
+
+Package: odhcpd-ipv6only
+Version: 2020-05-03-49e4949c-3
+Depends: libc, libubox20191228, libuci20130104, libubus20210603, libnl-tiny
+Source: package/network/services/odhcpd
+SourceName: odhcpd-ipv6only
+License: GPL-2.0
+Section: net
+Maintainer: Hans Dedecker <dedeckeh@gmail.com>
+Architecture: aarch64_generic
+Installed-Size: 33811
+Filename: odhcpd-ipv6only_2020-05-03-49e4949c-3_aarch64_generic.ipk
+Size: 34773
+SHA256sum: 824baf6d13df821909803862eb965834452d479032ad83826e9991a48578a096
+Description:  odhcpd is a daemon for serving and relaying IP management protocols to
+ configure clients and downstream routers. It tries to follow the RFC 6204
+ requirements for IPv6 home routers.
+ 
+ This is a variant providing server services for RA, stateless and stateful
+ DHCPv6,  prefix delegation and can be used to relay RA, DHCPv6 and NDP between
+ routed (non-bridged) interfaces in case no delegated prefixes are available.
+
+Package: openssl-util
+Version: 1.1.1n-1
+Depends: libc, libopenssl1.1, libopenssl-conf
+Source: package/libs/openssl
+SourceName: openssl-util
+License: OpenSSL
+LicenseFiles: LICENSE
+Section: utils
+Maintainer: Eneas U de Queiroz <cotequeiroz@gmail.com>
+Architecture: aarch64_generic
+Installed-Size: 227891
+Filename: openssl-util_1.1.1n-1_aarch64_generic.ipk
+Size: 228071
+SHA256sum: 343e470f3b4df88e2c2dbb38990099cd702ff611ef5ebab62efcf507a3aab995
+Description:  The OpenSSL Project is a collaborative effort to develop a robust,
+ commercial-grade, full-featured, and Open Source toolkit implementing the
+ Transport Layer Security (TLS) protocol as well as a full-strength
+ general-purpose cryptography library.
+ This package contains the OpenSSL command-line utility.
+
+Package: openwrt-keyring
+Version: 2019-07-25-8080ef34-1
+Depends: libc
+Provides: lede-keyring
+Source: package/system/openwrt-keyring
+SourceName: openwrt-keyring
+License: GPL-2.0
+Section: base
+Maintainer: John Crispin <john@phrozen.org>
+Architecture: aarch64_generic
+Installed-Size: 1317
+Filename: openwrt-keyring_2019-07-25-8080ef34-1_aarch64_generic.ipk
+Size: 2104
+SHA256sum: c4ea7c504234439596d3992a2abc4dc9b17ea2a901bbbef50433dec5ccfabf3c
+Description:  The keyring of with the developer using and gpg public keys.
+
+Package: opkg
+Version: 2020-05-07-f2166a89-1
+Depends: libc, uclient-fetch, libpthread, libubox20191228
+Source: package/system/opkg
+SourceName: opkg
+License: GPL-2.0
+LicenseFiles: COPYING
+Section: base
+Essential: yes
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: aarch64_generic
+Installed-Size: 66904
+Filename: opkg_2020-05-07-f2166a89-1_aarch64_generic.ipk
+Size: 67839
+SHA256sum: 5593f826182c79757de7d0ded17b052523b4f40758ffb1655fb0149923f8467b
+Description:  Lightweight package management system
+ opkg is the opkg Package Management System, for handling
+ installation and removal of packages on a system. It can
+ recursively follow dependencies and download all packages
+ necessary to install a particular package.
+ 
+ opkg knows how to install both .ipk and .deb packages.
+
+Package: ppp-mod-pppoe
+Version: 2.4.7.git-2019-05-25-3
+Depends: libc, kmod-pppoe
+Source: package/network/services/ppp
+SourceName: ppp-mod-pppoe
+License: BSD-4-Clause
+Section: net
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_generic
+Installed-Size: 10156
+Filename: ppp-mod-pppoe_2.4.7.git-2019-05-25-3_aarch64_generic.ipk
+Size: 10953
+SHA256sum: e7ece35f4ef533f37ffaed0d1a6c3d4954923f92b7a084491b8b80caf2bf496c
+Description:  This package contains a PPPoE (PPP over Ethernet) plugin for ppp.
+
+Package: ppp
+Version: 2.4.7.git-2019-05-25-3
+Depends: libc, kmod-ppp
+Source: package/network/services/ppp
+SourceName: ppp
+License: BSD-4-Clause
+Section: net
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_generic
+Installed-Size: 112064
+Filename: ppp_2.4.7.git-2019-05-25-3_aarch64_generic.ipk
+Size: 112901
+SHA256sum: c415d336e160a143ce16b4f037d227c02b60743a1f416a7d9b74cd7e925297cd
+Description:  This package contains the PPP (Point-to-Point Protocol) daemon.
+
+Package: procd
+Version: 2020-05-15-1ab539b3-1
+Depends: libc, ubusd, ubus, libjson-script, ubox, libubox20191228, libubus20210603, libblobmsg-json, libjson-c2
+Source: package/system/procd
+SourceName: procd
+License: GPL-2.0
+Section: base
+Require-User: :dialout=20 :audio=29
+Maintainer: John Crispin <john@phrozen.org>
+Architecture: aarch64_generic
+Installed-Size: 44225
+Filename: procd_2020-05-15-1ab539b3-1_aarch64_generic.ipk
+Size: 44698
+SHA256sum: 1fba9f8601859602374b585692e512ba2315dc25c3aa5e9baa6882904cf6d0e3
+Description:  OpenWrt system process manager
+
+Package: rpcd-mod-file
+Version: 2020-05-26-67c8a3fd-1
+Depends: libc, libubus20210603, libubox20191228, rpcd
+Source: package/system/rpcd
+SourceName: rpcd-mod-file
+License: ISC
+Section: utils
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: aarch64_generic
+Installed-Size: 6593
+Filename: rpcd-mod-file_2020-05-26-67c8a3fd-1_aarch64_generic.ipk
+Size: 7417
+SHA256sum: a8f3c00a4cd05de78c1f10b49ac46e65ef2940f7cb54903ff6a057655aab7565
+Description:  Provides ubus calls for file and directory operations.
+
+Package: rpcd-mod-iwinfo
+Version: 2020-05-26-67c8a3fd-1
+Depends: libc, libubus20210603, libubox20191228, rpcd, libiwinfo20181126
+Source: package/system/rpcd
+SourceName: rpcd-mod-iwinfo
+License: ISC
+Section: utils
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: aarch64_generic
+Installed-Size: 6172
+Filename: rpcd-mod-iwinfo_2020-05-26-67c8a3fd-1_aarch64_generic.ipk
+Size: 7003
+SHA256sum: e97ae7af29ccb2b57a795dc3ac41996b04a224d75116b463537c2f4a6197c520
+Description:  Provides ubus calls for accessing iwinfo data.
+
+Package: rpcd
+Version: 2020-05-26-67c8a3fd-1
+Depends: libc, libubus20210603, libubox20191228, libuci20130104, libblobmsg-json, libjson-c2
+Source: package/system/rpcd
+SourceName: rpcd
+License: ISC
+Section: utils
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: aarch64_generic
+Installed-Size: 23477
+Filename: rpcd_2020-05-26-67c8a3fd-1_aarch64_generic.ipk
+Size: 24257
+SHA256sum: 0f650aa219b8929f63ba08c832d0fbe0481b30c606cd5a7451aeabb3d4be00ca
+Description:  This package provides the UBUS RPC backend server to expose various
+ functionality to frontend programs via JSON-RPC.
+
+Package: ubox
+Version: 2019-06-16-4df34a4d-4
+Depends: libc, libubox20191228, ubusd, ubus, libubus20210603, libuci20130104
+Source: package/system/ubox
+SourceName: ubox
+License: GPL-2.0
+Section: base
+Maintainer: John Crispin <john@phrozen.org>
+Architecture: aarch64_generic
+Installed-Size: 14745
+Filename: ubox_2019-06-16-4df34a4d-4_aarch64_generic.ipk
+Size: 15451
+SHA256sum: 898726afb00d29979946c3a50873ca7aac2d61d71da7e1b805459b266eaf525b
+Description:  OpenWrt system helper toolbox
+
+Package: ubus
+Version: 2021-07-01-38c7fdd8-3
+Depends: libc, libubus20210603, libblobmsg-json, ubusd
+Source: package/system/ubus
+SourceName: ubus
+License: LGPL-2.1
+Section: base
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_generic
+Installed-Size: 5344
+Filename: ubus_2021-07-01-38c7fdd8-3_aarch64_generic.ipk
+Size: 6107
+SHA256sum: 5d7e1b0f29c0aa769b81d8ac624c8e438e90a3ab02cf78d86c4afd5135228856
+Description:  OpenWrt RPC client utility
+
+Package: ubusd
+Version: 2021-07-01-38c7fdd8-3
+Depends: libc, libubox20191228, libblobmsg-json
+Source: package/system/ubus
+SourceName: ubusd
+License: LGPL-2.1
+Section: base
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_generic
+Installed-Size: 11084
+Filename: ubusd_2021-07-01-38c7fdd8-3_aarch64_generic.ipk
+Size: 11832
+SHA256sum: 4656645417f8c32078604390f600e1fb27486e7a3e37aa3877d6a39668ceeb8a
+Description:  OpenWrt RPC daemon
+
+Package: uci
+Version: 2019-09-01-415f9e48-4
+Depends: libc, libuci20130104
+Source: package/system/uci
+SourceName: uci
+License: LGPL-2.1
+Section: base
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_generic
+Installed-Size: 6858
+Filename: uci_2019-09-01-415f9e48-4_aarch64_generic.ipk
+Size: 7626
+SHA256sum: 0c39de51e3333d68d148ad901a3a6b7a9031d3ee4f1492b344eabd3551cbb7fd
+Description:  Utility for the Unified Configuration Interface (UCI)
+
+Package: uclient-fetch
+Version: 2020-06-17-51e16ebf-1
+Depends: libc, libuclient20160123
+Provides: wget
+Alternatives: 200:/usr/bin/wget:/bin/uclient-fetch
+Source: package/libs/uclient
+SourceName: uclient-fetch
+License: ISC
+Section: net
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_generic
+Installed-Size: 6902
+Filename: uclient-fetch_2020-06-17-51e16ebf-1_aarch64_generic.ipk
+Size: 7706
+SHA256sum: 015859a63bdeb40960fc57ef8ddf8b98f530921f0e3e27cfe96cc90c4357f163
+Description:  Tiny wget replacement using libuclient
+
+Package: uhttpd
+Version: 2020-10-01-3abcc891-1
+Depends: libc, libubox20191228, libblobmsg-json, libjson-script, libjson-c2
+Source: package/network/services/uhttpd
+SourceName: uhttpd
+License: ISC
+Section: net
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_generic
+Installed-Size: 25134
+Filename: uhttpd_2020-10-01-3abcc891-1_aarch64_generic.ipk
+Size: 25866
+SHA256sum: a1c7606e364cc179d9d4c56ff1d81dbf5989b7f17028e2119ac905869d15af05
+Description:  uHTTPd is a tiny single threaded HTTP server with TLS, CGI and Lua
+ support. It is intended as a drop-in replacement for the Busybox
+ HTTP daemon.
+
+Package: urandom-seed
+Version: 1.0-1
+Depends: libc, getrandom
+Source: package/system/urandom-seed
+SourceName: urandom-seed
+License: GPL-2.0
+Section: base
+Architecture: aarch64_generic
+Installed-Size: 838
+Filename: urandom-seed_1.0-1_aarch64_generic.ipk
+Size: 1560
+SHA256sum: 16b03e7671c3e94a11f765d8db03890c953e25348d50e74077354dc0f2bb6871
+Description:  /etc/urandom.seed handling for OpenWrt
+
+Package: urngd
+Version: 2020-01-21-c7f7b6b6-1
+Depends: libc, libubox20191228
+Source: package/system/urngd
+SourceName: urngd
+License: GPL-2.0 BSD-3-Clause
+Section: utils
+Architecture: aarch64_generic
+Installed-Size: 4462
+Filename: urngd_2020-01-21-c7f7b6b6-1_aarch64_generic.ipk
+Size: 5427
+SHA256sum: 388299785268dbcbb0987cdc39bc1c2a71c86fe19867964029bd59bd9b0468a4
+Description:  urngd is OpenWrt's micro non-physical true random number generator based on
+ timing jitter.
+ 
+ Using the Jitter RNG core, the rngd provides an entropy source that feeds into
+ the Linux /dev/random device if its entropy runs low. It updates the
+ /dev/random entropy estimator such that the newly provided entropy unblocks
+ /dev/random.
+ 
+ The seeding of /dev/random also ensures that /dev/urandom benefits from
+ entropy. Especially during boot time, when the entropy of Linux is low, the
+ Jitter RNGd provides a source of sufficient entropy.
+
+Package: usign
+Version: 2020-05-23-f1f65026-1
+Depends: libc, libubox20191228
+Source: package/system/usign
+SourceName: usign
+License: ISC
+Section: base
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_generic
+Installed-Size: 10404
+Filename: usign_2020-05-23-f1f65026-1_aarch64_generic.ipk
+Size: 11156
+SHA256sum: 1b4cbf8318e4c00581441ceac6cbd9af9800b98f3da2deba59579da3b85e46ca
+Description:  OpenWrt signature verification utility
+
