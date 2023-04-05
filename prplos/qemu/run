@@ -1,0 +1,12 @@
+qemu-system-aarch64 \
+-M virt-2.9 \
+-m 2G \
+-no-reboot \
+-nographic \
+-cpu cortex-a53 \
+-smp 4 \
+-kernel zImage \
+-drive file=root.ext4,if=virtio,format=raw \
+-append "root=/dev/vda" \
+-nic user,hostfwd=tcp:127.0.0.1:8080-:80,hostfwd=tcp:127.0.0.1:8077-:5577,hostfwd=tcp:127.0.0.1:8022-:22 \
+-virtfs local,path=./foo,mount_tag=foo,security_model=mapped-xattr \
